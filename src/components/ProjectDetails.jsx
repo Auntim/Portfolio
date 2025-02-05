@@ -1,9 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { FaLongArrowAltRight } from "react-icons/fa";
+import { useParams, Link } from "react-router-dom";
+import { MdKeyboardArrowLeft } from "react-icons/md";
 
 
-// Import your images (adjust the paths as needed)
 import project1Img from "../assets/portfolio/pet-adoption.png";
 import project2Img from "../assets/portfolio/movie.png";
 import project3Img from "../assets/gadget.png";
@@ -57,7 +56,7 @@ const projects = [
         id: "4",
         projectName: "Donate-Bangladesh",
         image: project4Img,
-        techStack: ["HTML", "JavaScript", "React", "Tailwind", "React Router Dom", "Firebase"],
+        techStack: ["React", "Tailwind", "React Router Dom", "Firebase"],
         description:
             "A modern e-commerce site showcasing gadgets and accessories with detailed product views.",
         liveLink: "https://auntim.github.io/assign-ment-05/",
@@ -85,7 +84,7 @@ const projects = [
         id: "6",
         projectName: "Rinterio",
         image: project6Img,
-        techStack: ["HTML", "CSS", "JavaScript", "DOM"],
+        techStack: ["React", "Tailwind", "React Router"],
         description:
             "A modern e-commerce site showcasing gadgets and accessories with detailed product views.",
         liveLink: "https://auntim.github.io/assign-ment-03/",
@@ -97,57 +96,95 @@ const projects = [
     },
 ];
 
-const Portfolio = () => {
-    return (
-        <div
-            name='portfolio'
-            className="bg-gradient-to-b from-black to-gray-800 w-full text-white  p-4">
-            <div className="max-w-screen-lg p-4 mx-auto">
-                <h1 className="text-4xl font-bold text-start mb-8 inline border-b-4 border-gray-500">My Projects</h1>
-                <p className="py-6">Check out some of my work right here</p>
-                <div className="grid md:grid-cols-2 gap-8 mt-12">
-                    {projects.map((project) => (
-                        <div
-                            key={project.id}
-                            className="bg-gray-900 rounded-lg shadow-lg overflow-hidden"
-                        >
-                            {/* Project Image */}
-                            <img
-                                src={project.image}
-                                alt={project.projectName}
-                                className="w-full h-48 object-cover"
-                            />
-                            {/* Project Name & View More Button */}
-                            <div className="p-4">
-                                <h2 className="text-2xl font-semibold mb-2">
-                                    {project.projectName}
-                                </h2>
-                                <div>
-                                    <ul className="flex flex-wrap gap-2 ml-6 mt-2 my-4">
-                                        {project.techStack.map((tech, index) => (
-                                            <span
-                                                key={index}
-                                                className="text-sm bg-slate-600 px-2 py-1  rounded"
-                                            >
-                                                {tech}
-                                            </span>
-                                        ))}
-                                    </ul>
-                                </div>
-                                <Link to={`/project/${project.id}`}>
-                                    <button className="flex justify-center items-center gap-2  btn btn-outline hover:text-gray-800 text-white py-2 px-4 rounded w-full">
-                                        View More <span><FaLongArrowAltRight className="h-6 w-6" />
-                                        </span>
-                                    </button>
+const ProjectDetails = () => {
+    const { id } = useParams();
+    const project = projects.find((p) => p.id === id);
 
-                                </Link>
-                            </div>
-                        </div>
-                    ))}
+    if (!project) {
+        return (
+            <div className="text-white p-4">
+                <h2>Project not found</h2>
+                <Link to="/">Go back</Link>
+            </div>
+        );
+    }
+
+    return (
+        <div className="bg-gradient-to-b from-black to-gray-800 w-full text-white min-h-screen p-8">
+            <div className="max-w-3xl mx-auto mt-24">
+                {/* Project Image */}
+                <img
+                    src={project.image}
+                    alt={project.projectName}
+                    className="w-full h-[500px] object-cover rounded-lg"
+                />
+                {/* Project Name */}
+                <h1 className="text-4xl text-orange-500 font-bold mt-4">{project.projectName}</h1>
+                {/* Technology Stack */}
+                <div className="mt-4">
+                    <h2 className="text-2xl font-semibold">Main Technology Stack Used</h2>
+                    <ul className="list-disc ml-6 mt-2">
+                        {project.techStack.map((tech, index) => (
+                            <li key={index}>{tech}</li>
+                        ))}
+                    </ul>
+                </div>
+                {/* Brief Description */}
+                <div className="mt-4">
+                    <h2 className="text-2xl font-semibold">Brief Description</h2>
+                    <p className="mt-2">{project.description}</p>
+                </div>
+                {/* Live Project Link */}
+                <div className="mt-4">
+                    <h2 className="text-2xl font-semibold">Live Project Link</h2>
+                    <a
+                        href={project.liveLink}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-blue-400 hover:underline"
+                    >
+                        {project.liveLink}
+                    </a>
+                </div>
+                {/* GitHub Repository Link (Client) */}
+                <div className="mt-4">
+                    <h2 className="text-2xl font-semibold">
+                        GitHub Repository (Client)
+                    </h2>
+                    <a
+                        href={project.codeLink}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-blue-400 hover:underline"
+                    >
+                        {project.codeLink}
+                    </a>
+                </div>
+                {/* Challenges Faced */}
+                <div className="mt-4">
+                    <h2 className="text-2xl font-semibold">
+                        Challenges Faced While Developing the Project
+                    </h2>
+                    <p className="mt-2">{project.challenges}</p>
+                </div>
+                {/* Potential Improvements */}
+                <div className="mt-4">
+                    <h2 className="text-2xl font-semibold">
+                        Potential Improvements and Future Plans for the Project
+                    </h2>
+                    <p className="mt-2">{project.improvements}</p>
+                </div>
+                {/* Back Button */}
+                <div className="mt-8">
+                    <Link to="/">
+                        <button className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded flex justify-center items-center gap-1">
+                            <span><MdKeyboardArrowLeft className="w-6 h-6" /></span> Back to Portfolio
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>
     );
 };
 
-export default Portfolio;
+export default ProjectDetails;
