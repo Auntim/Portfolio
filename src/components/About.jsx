@@ -9,13 +9,13 @@ const About = () => {
       className="w-full md:h-screen bg-gradient-to-b from-gray-800 to-black text-white"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
-        <div className="pb-8">
-          <p className="text-4xl font-bold inline border-b-4 border-gray-500">
+        <div className="pb-8 mt-12 md:mt-4">
+          <p className="text-4xl hover:text-orange-600 font-bold inline border-b-4 border-gray-500">
             About
           </p>
         </div>
 
-        <p className="text-xl mt-20">
+        <p className="text-xl mt-12">
           Hi! I’m Auntim Hossen Saikat, a passionate web developer dedicated to creating dynamic and user-friendly web experiences. With a strong foundation in modern web technologies like React, JavaScript, and Tailwind CSS, I thrive on crafting responsive and engaging designs that bring ideas to life.
         </p>
 

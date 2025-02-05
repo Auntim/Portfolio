@@ -9,6 +9,7 @@ import nextjs from "../assets/nextjs.png";
 import MongoDb from "../assets/graphql.png";
 import github from "../assets/github.png";
 import tailwind from "../assets/tailwind.png";
+import firebase from "../assets/firebase.png";
 
 const Experience = () => {
     const techs = [
@@ -60,6 +61,12 @@ const Experience = () => {
             title: "GitHub",
             style: "shadow-gray-400",
         },
+        {
+            id: 9,
+            src: firebase,
+            title: "Firebase",
+            style: "shadow-gray-400",
+        },
     ];
 
     return (
@@ -67,9 +74,9 @@ const Experience = () => {
             name="experience"
             className="bg-gradient-to-b from-gray-800 to-black w-full md:h-screen"
         >
-            <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
-                <div>
-                    <p className="text-4xl font-bold border-b-4 border-gray-500 p-2 inline">
+            <div className="max-w-screen-lg mx-auto p-4 mt-12 flex flex-col justify-center w-full h-full text-white">
+                <div className="mt-0 md:mt-24">
+                    <p className="text-4xl  font-bold border-b-4 border-gray-500 p-2 inline hover:text-orange-600">
                         Experience
                     </p>
                     <p className="py-6">These are the technologies I've worked with</p>
