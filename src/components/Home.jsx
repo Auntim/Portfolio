@@ -10,8 +10,8 @@ const Home = () => {
             name="home"
             className="h-screen w-full bg-gradient-to-b from-black via-black to-gray-800"
         >
-            <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full  px-4 md:flex-row">
-                <div className="flex flex-col justify-center h-full">
+            <div className="max-w-screen-lg mx-auto  flex flex-col items-center justify-center h-full  px-4 md:flex-row">
+                <div className="flex flex-col justify-center mt-40 md:mt-0 h-full">
                     <h3 className="text-2xl font-semibold text-[#A0EFFF] ">Hi,Myself Auntim Hossen Saikat!</h3>
                     <h2 className="text-4xl sm:text-7xl font-bold text-white">
                         I'm a Junior MERN Stack Developer
@@ -22,7 +22,7 @@ const Home = () => {
                         React, Tailwind, Next JS and MongoDB.
                     </p>
 
-                    <div>
+                    <div className="">
                         <Link
                             to="portfolio"
                             smooth
@@ -41,7 +41,7 @@ const Home = () => {
                     <img
                         src={HeroImage}
                         alt="my profile"
-                        className="rounded-2xl mx-auto w-2/3 md:h-[400px] md:w-[650px] ml-20"
+                        className="rounded-full mx-auto w-3/4  md:h-[400px] md:w-[650px] ml-20 items-center"
                     />
                 </div>
             </div>

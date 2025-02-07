@@ -84,7 +84,7 @@ const projects = [
         id: "6",
         projectName: "Rinterio",
         image: project6Img,
-        techStack: ["React", "Tailwind", "React Router"],
+        techStack: ["HTML", "Tailwind", "Custom CSS", "JavaScript", "React Router Dom", "Authentication"],
         description:
             "A modern e-commerce site showcasing gadgets and accessories with detailed product views.",
         liveLink: "https://auntim.github.io/assign-ment-03/",
@@ -123,9 +123,14 @@ const ProjectDetails = () => {
                 {/* Technology Stack */}
                 <div className="mt-4">
                     <h2 className="text-2xl font-semibold">Main Technology Stack Used</h2>
-                    <ul className="list-disc ml-6 mt-2">
+                    <ul className=" flex flex-wrap gap-2 ml-6 mt-2 my-4">
                         {project.techStack.map((tech, index) => (
-                            <li key={index}>{tech}</li>
+                            <span
+                                key={index}
+                                className="text-lg bg-slate-600 px-2 py-1 opacity-70 rounded"
+                            >
+                                {tech}
+                            </span>
                         ))}
                     </ul>
                 </div>

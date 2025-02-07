@@ -102,8 +102,8 @@ const Portfolio = () => {
         <div
             name='portfolio'
             className="bg-gradient-to-b from-black to-gray-800 w-full text-white  p-4">
-            <div className="max-w-screen-lg p-4 mx-auto">
-                <h1 className="text-4xl font-bold text-start mb-8 inline border-b-4 border-gray-500">My Projects</h1>
+            <div className="max-w-screen-lg p-4 mx-auto mt-12 md:mt-24">
+                <h1 className="text-4xl font-bold text-start hover:text-orange-600 mb-8 inline border-b-4 border-gray-500">My Projects</h1>
                 <p className="py-6">Check out some of my work right here</p>
                 <div className="grid md:grid-cols-2 gap-8 mt-12">
                     {projects.map((project) => (
@@ -115,15 +115,17 @@ const Portfolio = () => {
                             <img
                                 src={project.image}
                                 alt={project.projectName}
-                                className="w-full h-48 object-cover"
+                                className="w-full h-48  object-cover"
                             />
                             {/* Project Name & View More Button */}
                             <div className="p-4">
-                                <h2 className="text-2xl font-semibold mb-2">
-                                    {project.projectName}
+                                <h2 className="text-2xl mb-4 text-[#23e7ee] font-semibold ">
+                                    Title: {project.projectName}
                                 </h2>
                                 <div>
+                                    <h2 className="text-xl font-semibold mb-2 opacity-85">Technology Used:</h2>
                                     <ul className="flex flex-wrap gap-2 ml-6 mt-2 my-4">
+
                                         {project.techStack.map((tech, index) => (
                                             <span
                                                 key={index}
