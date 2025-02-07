@@ -18,8 +18,8 @@ const projects = [
         techStack: ["React", "Tailwind", "Firebase", "MongoDB", "Express.JS", "Node Js", "Daisy", "Stripe"],
         description:
             "A web application that facilitates pet adoption by connecting potential adopters with local shelters.",
-        liveLink: "https://pet-adoption-demo.web.app/",
-        codeLink: "https://github.com/username/pet-adoption-client",
+        liveLink: "https://pet-adoption-f71aa.web.app/",
+        codeLink: "https://github.com/Auntim/pet-adoption-A12-client?tab=readme-ov-file",
         challenges:
             "Managing real-time data updates and user authentication was challenging.",
         improvements:
@@ -32,8 +32,8 @@ const projects = [
         techStack: ["React", "Tailwind", "Firebase", "MongoDB", "Express.JS", "Node Js", "Daisy",],
         description:
             "An online movie store where users can browse, search, and get details about movies.",
-        liveLink: "https://movie-store-demo.web.app/",
-        codeLink: "https://github.com/username/movie-store-client",
+        liveLink: "https://movie-store-fb2c5.web.app/",
+        codeLink: "https://github.com/Auntim/assign-ment-10-client-side",
         challenges:
             "Optimizing animations and ensuring performance across devices was a hurdle.",
         improvements:
@@ -45,8 +45,8 @@ const projects = [
         image: project3Img,
         techStack: ["React", "Tailwind", "Firebase", "MongoDB", "Express.JS", "Node Js", "Daisy",], description:
             "A modern e-commerce site showcasing gadgets and accessories with detailed product views.",
-        liveLink: "https://gadget-heaven-demo.web.app/",
-        codeLink: "https://github.com/username/gadget-heaven-client",
+        liveLink: "https://helpful-crumble-73f4c4.netlify.app/",
+        codeLink: "https://github.com/Auntim/Gadget-Heaven",
         challenges:
             "Implementing a secure checkout process and responsive design required extra effort.",
         improvements:
