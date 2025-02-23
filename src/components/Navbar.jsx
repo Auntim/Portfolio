@@ -1,9 +1,32 @@
-import React, { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import React, { useState, useEffect, useRef } from "react";
+import { FaBars, FaCode, FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
+import { motion } from "framer-motion";
+// const text = "Auntim";
+// const highlightLength = 3;
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+
+  // const textRef = useRef(null);
+  // let index = 0;
+
+
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     if (textRef.current) {
+  //       const currentText = text.slice(0, index + 1);
+  //       const highlighted = `<span class="text-orange-500">${currentText.slice(
+  //         0,
+  //         highlightLength
+  //       )}</span>${currentText.slice(highlightLength)}`;
+  //       textRef.current.innerHTML = highlighted; // Add one letter at a time
+  //       index = (index + 1) % (text.length + 1); // Reset after full sentence
+  //     }
+  //   }, 150); // Adjust speed of letter appearance
+
+  //   return () => clearInterval(interval);
+  // }, []);
 
   const links = [
     {
@@ -29,9 +52,9 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-gray-800 fixed">
-      <div>
-        <h1 className="text-5xl font-signature ml-2"> <span className="text-orange-500">Aun</span>tim</h1>
+    <div className="flex justify-between items-center w-full h-16 px-4 text-white bg-gray-800 fixed top-0 z-50">
+      <div className="ml-8">
+        <span><FaCode className="text-6xl text-orange-600" /></span>
       </div>
 
       <ul className="hidden md:flex">

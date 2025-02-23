@@ -29,7 +29,7 @@ const Home = () => {
             className="h-screen w-full bg-gradient-to-b from-black via-black to-gray-800"
         >
             <div className="max-w-screen-lg mx-auto  flex flex-col items-center justify-center h-full  px-4 md:flex-row">
-                <div className="flex flex-col justify-center mt-40 md:mt-20 h-full">
+                <div className="flex flex-col justify-center mt-40 md:mt-0 h-full">
                     <motion.h3
                         ref={textRef}
                         initial={{ opacity: 0 }}
@@ -43,12 +43,12 @@ const Home = () => {
                         I'm a Junior MERN Stack Developer
                     </h2>
                     <p className="text-gray-500 py-4 max-w-md">
-                        I have 3 years of experience building and desgining software.
+                        I have 1 years of experience building and desgining software.
                         Currently, I love to work on web application using technologies like
                         React, Tailwind, Next JS and MongoDB.
                     </p>
 
-                    <div className="">
+                    <div className="flex justify-center md:justify-start mb-6">
                         <Link
                             to="portfolio"
                             smooth
@@ -67,7 +67,7 @@ const Home = () => {
                     <img
                         src={HeroImage}
                         alt="my profile"
-                        className="rounded-full mx-auto w-full  md:h-[400px] md:w-[750px] md:ml-20 items-center border-8 border-fuchsia-700"
+                        className="rounded-full mx-auto w-3/5  md:h-[400px] md:w-[750px] md:ml-20 items-center border-8 border-[#A0EFFF]"
                     />
                 </div>
             </div>

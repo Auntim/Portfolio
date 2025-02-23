@@ -10,7 +10,7 @@ const About = () => {
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-1 mt-24 md:mt-24">
-          <p className="text-4xl hover:text-orange-600 font-bold  inline border-b-4 border-gray-500">
+          <p className="text-4xl hover:text-orange-600 font-bold  inline border-b-4 border-gray-500 pt-12">
             About
           </p>
         </div>
@@ -21,7 +21,7 @@ const About = () => {
           <div className="w-8/12 mt-16 items-center md:ml-0 ml-6">
             <div>
               <h2 className="text-2xl font-semibold inline border-b-4 border-gray-600 text-fuchsia-600 mb-4">Educational Background:</h2>
-              <p className="text-[16px] mt-3 text-wrap">
+              <p className="text-[16px] mt-3  md:text-wrap">
                 Hello! I'm a <span className="text-[#A0EFFF] text-xl">Computer Science</span> graduate from <span className="text-[#A0EFFF] text-xl">University Of Creative Technology & Chittagong</span> with a fervent passion for coding, particularly within the realm of web programming. I thrive on creating digital experiences that are not only visually appealing but also highly functional and efficient.
               </p>
             </div>
